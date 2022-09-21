@@ -54,10 +54,13 @@ trap cleanup SIGINT
 echo -e "\nimage: creating sparse file for disk image ${DISK##*/}..."
 dd if=/dev/zero of="${DISK}" bs=1M count=0 seek="${DISK_SIZE}" conv=fsync >"${SAVE_ERROR}" 2>&1 || show_error
 
-if [ "${BOOTLOADER}" = "syslinux" ]; then
-  DISK_LABEL=gpt
-else
-  DISK_LABEL=msdos
+# use user forced disk label if available. Will be useful for big usb hdd over 2TB formatting with gpt.
+if [ "${DISK_LABEL}" = "" ]; then
+  if [ "${BOOTLOADER}" = "syslinux" ]; then
+    DISK_LABEL=gpt
+  else
+    DISK_LABEL=msdos
+  fi
 fi
 
 # write a disklabel
