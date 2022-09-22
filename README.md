@@ -22,13 +22,13 @@ $ apt install gcc make git unzip wget xz-utils libsdl2-dev libsdl2-mixer-dev lib
 ```
 
 ### Building EmuELEC
-To build EmuELEC locally do the following:
+To build EmuELEC to support HDD over 2TB locally do the following:
 
 ```
-$ git clone https://github.com/EmuELEC/EmuELEC.git
+$ git clone https://github.com/wqmeng/EmuELEC.git
 $ cd EmuELEC
-$ git checkout dev
-$ PROJECT=Amlogic-ce DEVICE=Amlogic-ng ARCH=aarch64 DISTRO=EmuELEC make image
+$ git checkout mydev
+$ PROJECT=Amlogic-ce DEVICE=Amlogic-ng ARCH=aarch64 DISTRO=EmuELEC DISK_LABEL=gpt make image
 ```
 
 For the Odroid GO Advance/Super:
