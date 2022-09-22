@@ -2,7 +2,7 @@
 # Copyright (C) 2021-present Shanti Gilbert (https://github.com/shantigilbert)
 
 PKG_NAME="bstone"
-PKG_VERSION="e18d81a85aa8edf87bf4e19ae020a0ca465ac2ca"
+PKG_VERSION="14b7034e84f5e662cec6a5d638ea44fa44640233"
 PKG_ARCH="any"
 PKG_SITE="https://github.com/bibendovsky/bstone"
 PKG_URL="$PKG_SITE.git"
