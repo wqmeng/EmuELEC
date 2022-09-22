@@ -22,6 +22,15 @@ $ apt install gcc make git unzip wget xz-utils libsdl2-dev libsdl2-mixer-dev lib
 ```
 
 ### Building EmuELEC
+To build EmuELEC locally do the following:
+
+```
+$ git clone https://github.com/wqmeng/EmuELEC.git
+$ cd EmuELEC
+$ git checkout mydev
+$ PROJECT=Amlogic-ce DEVICE=Amlogic-ng ARCH=aarch64 DISTRO=EmuELEC make image
+```
+
 To build EmuELEC to support HDD over 2TB locally do the following:
 
 ```
